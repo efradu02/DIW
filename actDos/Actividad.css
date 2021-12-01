@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.containerGeneral {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.tarjetaMontaña {
+    background-image: url("https://picsum.photos/id/961/600/400");
+    background-size: cover;
+    background-position:center;
+    width: 500px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+}
+
+ .tarjetaMontaña::before {
+    content: "";
+    background-image: linear-gradient(to bottom, rgba(6, 76, 113, 0.3), rgba(6, 76, 113, 0.3), rgba(0, 0, 0, 0.8)), url("https://picsum.photos/id/961/600/400");
+    position: absolute;
+    background-size: cover;
+    background-position:center;
+    top: 0px;
+    right: 0px;
+    left: 0px;
+    bottom: 0px;
+ }
+
+.tarjetaContenido {
+    position: absolute;
+    align-self: center;
+}
+
+.wrapperUno {
+    display: flex;
+    align-content: space-around;
+    flex-direction: column;
+}
+
+.tarjetaContenido h3, .tarjetaContenido p {
+    color: white;
+    text-align: center;
+}
+
+.tarjetaContenido h3 {
+    font-size: 24px;
+}
+
+.tarjetaContenido h3, .tarjetaContenido p, .separador {
+    margin-top: 15px;
+}
+
+.separador {
+    width: 60px;
+    height: 3px;
+    background-color: orange;
+    margin-left: 2.3em;
+}
+
+.sombra {
+    position: absolute;
+    width: 500px;
+    height: 60px;
+}

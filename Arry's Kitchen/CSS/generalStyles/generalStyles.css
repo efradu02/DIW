@@ -1,36 +1,176 @@
-@import url('https://fonts.googleapis.com/css2?family=Exo:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Exo:wght@200&family=Open+Sans+Condensed:ital,wght@1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
 
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 #gridWrapper {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 160px 1fr;
+    grid-template-rows: 40px 30px 50px 85.9vh 80vh;
 }
 
-.navWrapper {
-    display: flex;
+header {
     grid-column: 1/3;
-    grid-row: 1/2;
-    background-color: #faf3dd;
+    grid-row: 1/1;
+    background-color: var(--varNavbar1);
+}
+
+.navigatorWrapper {
     display: flex;
     flex-direction: row;
-    border-bottom: 2px solid #011627;
+    justify-content: center;
 }
 
-.wrapperLogo {
+header img {
+    margin-top: 2px;
+    width: 36px;
+    height: 36px;
+    grid-column: 1/3;
+    grid-row: 1/1;
     align-self: center;
 }
 
-.navWrapper p {
+header p {
+    margin-inline-start: 2rem;
     color: white;
+    align-self: center;
+    font-family: 'Exo';
+    cursor: pointer;
+    transition: 0.3s all ease-in-out;
 }
 
-.navImg {
-    width: 260px;
-    height: 260px;
+header p:hover {
+    color: #ead2ac;
+}
+
+header a {
+    text-decoration: none;
+    color: white;
+}
+.wrapperBienvenida {
+    grid-column: 1/3;
+    grid-row: 2/2;
+    background-color: var(--varNavbar2);
+    display: flex;
+    justify-content: center;
+}
+
+.wrapperBienvenida p {
+    align-self: center;
+    color: white;
+    font-family: 'Quicksand';
+}
+
+.searchWrapper {
+    grid-column: 1/3;
+    grid-row: 3/3;
+    background-color: var(--varNavbar2);
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.textSearch {
+    width: 400px;
+    height: 35px;
+    text-align: center;
+    border-radius: 0;
+    font-family: 'Quicksand';
+    border: 0;
+    transition: 0.3s all ease-in;
+}
+
+.buttonSearch {
+    width: 70px;
+    height: 35px;
+    border-radius: 0;
+    margin-left: -40px;
+    background-color: #f7b267;
+    display: flex;
+    justify-content:center;
+    padding: 5px;
+    border-left: 1px solid black;
+    cursor: pointer;
+}
+
+.textSearch:hover {
+    width: 500px;  
+}
+
+.buttonSearch:hover {
+    background-color: #f7c59f;
+}
+
+.searchWrapper:focus, input:focus{
+    outline: none;
+}
+
+.showcaseWrapper {
+    background-image: linear-gradient(to bottom, rgba(10, 30, 214, 0.3), rgba(197, 6, 156, 0.3), rgba(0,0,0,.5), rgba(0, 0, 0, 1)), url('../../RESOURCES/Backgrounds/finnishLandscape.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    grid-column: 1/3;
+    grid-row: 4/5;
+    border-top: 1px solid lightgreen;
+    transition: 0.7s all;
+}
+
+.tarjetitasWrapper {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    grid-column: 1/3;
+    grid-row: 4/4;
+    height: 85.8vh;
+    opacity: 0%;
+    transition: all 0.7s ease-in-out;
+}
+
+.showcaseWrapper:hover .tarjetitasWrapper{
+    opacity: 100%;
+}
+
+.showcaseWrapper:hover .tarjetitasWrapper h3 {
+    margin-top: 50vh;
+}
+
+.tarjetitasWrapper h3, .tarjetitasWrapper p {
+    justify-self: center;
+    text-align: center;
+}
+
+.tarjetitasWrapper h3 {
+    color: white;
+    font-family: 'Exo';
+    font-size: 28px;
+    margin-top: 70vh;
+    transition: all 0.7s ease-in-out;
+}
+
+.tarjetitasWrapper p {
+    color: white;
+    font-family: 'Quicksand';
+    font-size: 12px;
+}
+
+.showcaseRestaurantes {
+    grid-column: 1/3;
+    grid-row: 5/5;
+    background-color: #e5dada;
+    display: flex;
+    justify-content: space-evenly;
+    align-content: center;
+}
+
+.tarjetaRestUno, .tarjetaRestDos, .tarjetaRestTres {
+    width: 300px;
+    height: 500px;
+    background-color: red;
+    align-self: center;
 }

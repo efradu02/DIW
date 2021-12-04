@@ -1,20 +1,55 @@
 <!DOCTYPE html>
     <html lang="es">
         <head>
-            <title>Arry's SpaceFood</title>
+            <title>Arry's Kitchen | Inicio</title>
             <meta name="author" content="Eduard Fernando Radu">
             <meta name="viewport" content="width=device-width, initial-scale=1">
             <meta charset="UTF-8">
             <link rel="stylesheet" href="../CSS/generalStyles/generalStyles.css">
+            <link rel="stylesheet" href="../CSS/generalStyles/variablesCSS.css">
+            <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+            <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
         </head>
         <body>
             <div id="gridWrapper">
-                <nav class="navWrapper">
-                    <div class="wrapperLogo">
-                    <img class="navImg" src="../RESOURCES/Images/logoNavbar.png"></img>
-                    <p>The Restaurant at the End of The Universe</p>
-                    </div>
+            <header>
+                <nav class="navigatorWrapper">
+            
+                <img src="../RESOURCES/Icons/logoWebsite.png"></img>
+              <p><a href="#showcaseRestaurantes">Restaurantes</a></p>
+                <p>Menú</p>
+                <p>Reservas</p>
+                <p>Contacto</p>
                 </nav>
+            </header>
+            <div class="wrapperBienvenida">
+                <p>¡Disfruta de nuestra variedad en comida natural!</p>
             </div>
+            <div class="searchWrapper">
+                <input type="text" class="textSearch" id="textSearch" placeholder="Busca por nombre, ID, región o autor del plato..."></input>
+                <div class="buttonSearch" id="buttonSearch">
+                    <img src="../RESOURCES/Icons/searchIcon.png"></img>
+                </div>
+            </div>
+            <div class="showcaseWrapper">
+                <div class="tarjetitasWrapper">
+                    <h3>¡Sigue bajando para acceder a nuestras ofertas!</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos quo, molestiae voluptates magnam aut earum quis vel nesciunt, unde corrupti quibusdam sequi asperiores quas odio eum ea pariatur fugiat est.</p>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque suscipit atque harum fugit pariatur mollitia molestias sed ad magnam eveniet, consequatur, impedit iusto consectetur? Amet sequi eius vel reprehenderit! Enim.</p>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sapiente vel atque necessitatibus quisquam similique, id est dignissimos iusto at repellendus natus explicabo nihil cupiditate eos libero consequuntur accusantium neque. Voluptatum!</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, numquam? Quidem nemo laudantium totam suscipit minima cum ex optio reprehenderit molestias, fugit veniam nobis hic quasi. Iure ea ut fugit!</p>
+                </div>
+            </div>
+                <div class="showcaseRestaurantes" id="showcaseRestaurantes">
+                    <div data-aos="fade-right"
+                    data-aos-easing="linear"
+                    data-aos-duration="700" class="tarjetaRestUno"></div>
+                    <!-- <div data-aos="fade-down-right" class="tarjetaRestDos"></div>
+                    <div data-aos="fade-down-left" class="tarjetaRestTres"></div> -->
+                </div>
+            </div>
+            <script>
+                AOS.init();
+              </script>
         </body>
     </html>

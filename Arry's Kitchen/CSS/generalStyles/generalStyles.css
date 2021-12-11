@@ -11,7 +11,7 @@
 #gridWrapper {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 40px 30px 50px 85.9vh 80vh;
+    grid-template-rows: 40px 30px 50px 85.9vh 100px 80vh 100px 100vh;
 }
 
 header {
@@ -30,8 +30,6 @@ header img {
     margin-top: 2px;
     width: 36px;
     height: 36px;
-    grid-column: 1/3;
-    grid-row: 1/1;
     align-self: center;
 }
 
@@ -44,7 +42,12 @@ header p {
     transition: 0.3s all ease-in-out;
 }
 
-header p:hover {
+header a {
+    transition: 0.3s all ease-in-out;
+}
+
+
+header p:hover, header a:hover {
     color: #ead2ac;
 }
 
@@ -53,7 +56,7 @@ header a {
     color: white;
 }
 .wrapperBienvenida {
-    grid-column: 1/3;
+    grid-column: 1/4;
     grid-row: 2/2;
     background-color: var(--varNavbar2);
     display: flex;
@@ -67,7 +70,7 @@ header a {
 }
 
 .searchWrapper {
-    grid-column: 1/3;
+    grid-column: 1/4;
     grid-row: 3/3;
     background-color: var(--varNavbar2);
     display: flex;
@@ -115,7 +118,7 @@ header a {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    grid-column: 1/3;
+    grid-column: 1/4;
     grid-row: 4/5;
     border-top: 1px solid lightgreen;
     transition: 0.7s all;
@@ -159,18 +162,315 @@ header a {
     font-size: 12px;
 }
 
-.showcaseRestaurantes {
-    grid-column: 1/3;
+
+.separador {
+    grid-column: 1/4;
     grid-row: 5/5;
-    background-color: #e5dada;
+    background-color: #001427;
+    border-top: 2px solid seagreen;
+}
+
+.showcaseRestaurantes {
+    border-top: 2px solid seagreen;
+    grid-column: 1/4;
+    grid-row: 6/6;
+    background: #ffa17f; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #ffa17f, #00223e);
+  background: linear-gradient(to right, #ffa17f, #00223e);
     display: flex;
     justify-content: space-evenly;
     align-content: center;
+    color: white;
 }
 
 .tarjetaRestUno, .tarjetaRestDos, .tarjetaRestTres {
-    width: 300px;
-    height: 500px;
-    background-color: red;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    width: 25vw;
+    height: 70vh;
+    background-color: black;
     align-self: center;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+.tarjetaRestUno {
+    background-image:  linear-gradient(to bottom, rgba(47, 13, 199, 0.6), rgba(82, 12, 67, 0.5), rgba(2, 12, 26, 0.5), rgba(0, 0, 0, 1)), url('../../RESOURCES/Backgrounds/mtnBackground.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.tarjetaRestDos {
+    background-image:  linear-gradient(to bottom, rgba(194, 3, 153, 0.6), rgba(92, 8, 74, 0.5), rgba(1, 4, 7, 0.5), rgba(0, 0, 0, 1)), url('../../RESOURCES/Backgrounds/mtnBackground2.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.tarjetaRestTres {
+    background-image:  linear-gradient(to bottom, rgba(59, 10, 151, 0.6), rgba(82, 7, 65, 0.5), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 1)), url('../../RESOURCES/Backgrounds/mtnBackground3.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.primerDiv {
+    margin-top: 20rem;
+    font-family: 'Exo';
+    font-size: 24px;
+}
+
+.segundoDivT1, .segundoDivT2, .segundoDivT3 {
+    padding: 25px;
+    cursor:default;
+    margin-bottom: -80px;
+    opacity: 0%;
+    text-align: center;
+    transition: all 0.7s ease-in-out; 
+}
+
+.tarjetaRestUno:hover .segundoDivT1 {
+    position: relative;
+    opacity: 100%;
+    margin-bottom: 0px;
+}
+
+.tarjetaRestDos:hover .segundoDivT2 {
+    position: relative;
+    opacity: 100%;
+    margin-bottom: 0px;
+}
+
+.tarjetaRestTres:hover .segundoDivT3 {
+    position: relative;
+    opacity: 100%;
+    margin-bottom: 0px;
+}
+
+.btnRestaurante {
+    cursor: pointer;
+    margin-top: 25px;
+    width: 10vw;
+    height: 5vh;
+    border: 0;
+    border-radius: 5px;
+    background-color: #273e47;
+    font-family: 'Exo';
+    font-size: 16px;
+    font-weight: bold;
+    color: #e8dab2;
+    text-transform: uppercase;
+}
+
+hr {
+    position: absolute;
+    background-color: #f4a261;
+    border: 0;
+    opacity: 0;
+    width: 0vw;
+    height: 0.5vh;
+    transition: 0.5s all ease-in;
+}
+
+.tarjetaRestUno:hover .hr1 {
+    width: 5.5vw;
+    opacity: 100%;
+    margin-bottom: 0px;
+}
+
+.tarjetaRestDos:hover .hr2 {
+    width: 8.5vw;
+    opacity: 100%;
+    margin-bottom: 0px;
+}
+
+.tarjetaRestTres:hover .hr3 {
+    width: 7.5vw;
+    opacity: 100%;
+    margin-bottom: 0px;
+}
+
+/* Media Queries para la primera parte de la práctica */
+
+@media screen and (max-width: 1400px) {
+    .showcaseRestaurantes {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 480px) {
+        header p {
+            font-size: 12px;
+            }
+        .textSearch {
+            font-size: 10px;
+            width: 300px;
+        }
+
+        .textSearch:hover {
+            width: 350px;
+        }
+
+        .tarjetitasWrapper h3 {
+            padding-left: 100px;
+            padding-right: 100px;
+            padding-bottom: 3px;
+            font-size: 18px;
+        }
+
+        .tarjetitasWrapper p {
+            padding-left: 50px;
+            padding-right: 50px;
+            font-size: 10px;
+        }
+
+        .wrapperBienvenida p {
+            font-size: 12px;
+        }
+       
+    }
+
+    @media screen and (max-width: 320px) {
+        header p {
+            font-size: 12px;
+            margin: 8px;
+            }
+
+            .textSearch {
+                font-size: 10px;
+                width: 250px;
+            }
+    
+            .textSearch:hover {
+                width: 270px;
+            }
+    }
+    .separadorDos {
+        grid-row: 7/7;
+        grid-column: 1/3;
+        background-color: #001427;
+    }
+    .showcaseRecetas {
+        background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(2, 2, 2, 0.7), rgb(43, 2, 34, 0.5)), url('../../RESOURCES/Backgrounds/backgroundComida.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        grid-row: 8/8;
+        grid-column: 1/3;
+        text-align: center;
+        color: white;
+    }
+
+    .textoRecetas {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        grid-column: 1/3;
+    }
+
+    .roundMenufg {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        height: 700px;
+    }
+
+    .roundMenu1, .roundMenu2, .roundMenu3, .roundMenu4, .roundMenu5, .roundMenu6 {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        border: 4px solid #ef8354;
+        border-radius: 100%;
+        width: 200px;
+        height: 200px;
+        margin-top: 10vh;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        transition: all 0.7s ease-in-out;
+    }
+
+    .roundMenu1 {
+        background-image: linear-gradient(to bottom, rgba(36, 14, 18, 0.7),rgba(48, 29, 29, 0.2), rgba(65, 3, 49, 0.6)), url('../../RESOURCES/Icons/lasañita.jpg');
+    }
+
+    .roundMenu1:hover .tituloProducto, .roundMenu1:hover .btnMenu, .roundMenu1:hover {
+        opacity: 1;
+    }
+    .roundMenu1:hover {
+        background-image: linear-gradient(to bottom, rgba(17, 1, 11, 0.9), rgba(0,0,0,0.2), rgba(17, 1, 11, 0.9)), url('../../RESOURCES/Icons/lasañita.jpg');
+    }
+
+    .roundMenu2 {
+        background-image: url('../../RESOURCES/Icons/sarmale.jpg');
+    }
+
+    .roundMenu2:hover .tituloProducto2, .roundMenu2:hover .btnMenu2 {
+        opacity: 1;
+    }
+    .roundMenu2:hover {
+        background-image: linear-gradient(to bottom, rgba(17, 1, 11, 0.9), rgba(0,0,0,0.2), rgba(17, 1, 11, 0.9)), url('../../RESOURCES/Icons/sarmale.jpg');
+    }
+
+    .roundMenu3 {
+        background-image: url('../../RESOURCES/Icons/sopasalmonfinlandesa.jpg');
+    }
+
+    .roundMenu3:hover .tituloProducto3, .roundMenu3:hover .btnMenu3 {
+        opacity: 1;
+    }
+    .roundMenu3:hover {
+        background-image: linear-gradient(to bottom, rgba(17, 1, 11, 0.9), rgba(0,0,0,0.2), rgba(17, 1, 11, 0.9)), url('../../RESOURCES/Icons/sopasalmonfinlandesa.jpg');
+    }
+
+    .roundMenu4 {
+        background-image: url('../../RESOURCES/Icons/uudet.jpg');
+    }
+
+    .roundMenu4:hover .tituloProducto4, .roundMenu4:hover .btnMenu4 {
+        opacity: 1;
+    }
+
+    .roundMenu4:hover {
+        background-image: linear-gradient(to bottom, rgba(17, 1, 11, 0.9), rgba(0,0,0,0.2), rgba(17, 1, 11, 0.9)), url('../../RESOURCES/Icons/uudet.jpg');
+    }
+
+    .roundMenu5 {
+        background-image: url('../../RESOURCES/Icons/poronkaristys.jpg');
+        background-position: 0%;
+    }
+
+    .roundMenu5:hover .tituloProducto5, .roundMenu5:hover .btnMenu5 {
+        opacity: 1;
+    }
+
+    .roundMenu5:hover {
+        background-image: linear-gradient(to bottom, rgba(17, 1, 11, 0.9), rgba(0,0,0,0.2), rgba(17, 1, 11, 0.9)), url('../../RESOURCES/Icons/poronkaristys.jpg');
+    }
+    
+
+    .tituloProducto, .tituloProducto2, .tituloProducto3, .tituloProducto4, .tituloProducto5 {
+        opacity: 0;
+        transition: all 0.7s ease-in-out;
+    }
+
+    .btnMenu, .btnMenu2, .btnMenu3, .btnMenu4, .btnMenu5 {
+        text-transform: uppercase;
+        background-color: #1b2021; 
+        border: 0;
+        color: #e8dab2;
+        margin-top: 20px;
+        text-align: center;
+        justify-self: center;
+        margin-left: 36px;
+        width: 120px;
+        height: 30px;
+        opacity: 0;
+        transition: all 0.7s ease-in-out;
+        cursor: pointer;
+    }

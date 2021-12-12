@@ -11,7 +11,7 @@
 #gridWrapper {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 40px 30px 50px 85.9vh 100px 80vh 100px 100vh;
+    grid-template-rows: 40px 30px 50px 85.9vh 10px 80vh 5px 60vh 3px 100vh 3px 75vh;
 }
 
 header {
@@ -114,7 +114,7 @@ header a {
 }
 
 .showcaseWrapper {
-    background-image: linear-gradient(to bottom, rgba(10, 30, 214, 0.3), rgba(197, 6, 156, 0.3), rgba(0,0,0,.5), rgba(0, 0, 0, 1)), url('../../RESOURCES/Backgrounds/finnishLandscape.jpg');
+    background-image: linear-gradient(to bottom, rgba(10, 30, 214, 0.3), rgba(197, 6, 156, 0.3), rgba(0,0,0,.5), rgba(0, 0, 0, 1)), url('../../RESOURCES/Backgrounds/restBackground.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -220,7 +220,7 @@ header a {
 }
 
 .primerDiv {
-    margin-top: 20rem;
+    margin-top: 15rem;
     font-family: 'Exo';
     font-size: 24px;
 }
@@ -297,59 +297,6 @@ hr {
 
 /* Media Queries para la primera parte de la práctica */
 
-@media screen and (max-width: 1400px) {
-    .showcaseRestaurantes {
-        display: none;
-    }
-}
-
-@media screen and (max-width: 480px) {
-        header p {
-            font-size: 12px;
-            }
-        .textSearch {
-            font-size: 10px;
-            width: 300px;
-        }
-
-        .textSearch:hover {
-            width: 350px;
-        }
-
-        .tarjetitasWrapper h3 {
-            padding-left: 100px;
-            padding-right: 100px;
-            padding-bottom: 3px;
-            font-size: 18px;
-        }
-
-        .tarjetitasWrapper p {
-            padding-left: 50px;
-            padding-right: 50px;
-            font-size: 10px;
-        }
-
-        .wrapperBienvenida p {
-            font-size: 12px;
-        }
-       
-    }
-
-    @media screen and (max-width: 320px) {
-        header p {
-            font-size: 12px;
-            margin: 8px;
-            }
-
-            .textSearch {
-                font-size: 10px;
-                width: 250px;
-            }
-    
-            .textSearch:hover {
-                width: 270px;
-            }
-    }
     .separadorDos {
         grid-row: 7/7;
         grid-column: 1/3;
@@ -367,10 +314,19 @@ hr {
     }
 
     .textoRecetas {
+        font-family: 'Exo';
+        text-transform: uppercase;
+        margin-top: 30px;
         display: flex;
         justify-content: center;
         flex-direction: column;
         grid-column: 1/3;
+    }
+
+    .textoRecetas p {
+        margin-top: 5px;
+        font-size: 14px;
+        font-family: 'Exo';
     }
 
     .roundMenufg {
@@ -393,6 +349,7 @@ hr {
         background-repeat: no-repeat;
         background-position: center;
         transition: all 0.7s ease-in-out;
+        font-family: 'Exo';
     }
 
     .roundMenu1 {
@@ -407,7 +364,7 @@ hr {
     }
 
     .roundMenu2 {
-        background-image: url('../../RESOURCES/Icons/sarmale.jpg');
+        background-image: linear-gradient(to bottom, rgba(36, 14, 18, 0.7),rgba(48, 29, 29, 0.2), rgba(65, 3, 49, 0.6)), url('../../RESOURCES/Icons/sarmale.jpg');
     }
 
     .roundMenu2:hover .tituloProducto2, .roundMenu2:hover .btnMenu2 {
@@ -418,7 +375,7 @@ hr {
     }
 
     .roundMenu3 {
-        background-image: url('../../RESOURCES/Icons/sopasalmonfinlandesa.jpg');
+        background-image: linear-gradient(to bottom, rgba(36, 14, 18, 0.7),rgba(48, 29, 29, 0.2), rgba(65, 3, 49, 0.6)), url('../../RESOURCES/Icons/sopasalmonfinlandesa.jpg');
     }
 
     .roundMenu3:hover .tituloProducto3, .roundMenu3:hover .btnMenu3 {
@@ -429,7 +386,7 @@ hr {
     }
 
     .roundMenu4 {
-        background-image: url('../../RESOURCES/Icons/uudet.jpg');
+        background-image: linear-gradient(to bottom, rgba(36, 14, 18, 0.7),rgba(48, 29, 29, 0.2), rgba(65, 3, 49, 0.6)), url('../../RESOURCES/Icons/uudet.jpg');
     }
 
     .roundMenu4:hover .tituloProducto4, .roundMenu4:hover .btnMenu4 {
@@ -441,7 +398,7 @@ hr {
     }
 
     .roundMenu5 {
-        background-image: url('../../RESOURCES/Icons/poronkaristys.jpg');
+        background-image: linear-gradient(to bottom, rgba(36, 14, 18, 0.7),rgba(48, 29, 29, 0.2), rgba(65, 3, 49, 0.6)), url('../../RESOURCES/Icons/poronkaristys.jpg');
         background-position: 0%;
     }
 
@@ -474,3 +431,405 @@ hr {
         transition: all 0.7s ease-in-out;
         cursor: pointer;
     }
+
+    .panelMenu {
+        grid-column: 1/3;
+        grid-row: 10/10;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .varMenu {
+        grid-column: 1/2;
+        grid-row: 10/10;
+    }
+
+    .menu1, .menu2, .menu3, .menu4 {
+        overflow: hidden;
+        background-image: linear-gradient(to bottom, rgba(7, 4, 4, 0.5), rgba(26, 3, 31, 0.6)),url('../../RESOURCES/Images/menuHamburguesa.jpg');
+        width: 50vw;
+        height: 50vh;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        display: flex;
+        justify-content:center;
+        text-align: center;
+        flex-direction: column;
+        transition: all 0.7s;
+        border: 2px solid white;
+    }
+
+    .inputMenus {
+        margin-bottom: 30px;
+        width: 120px;
+        height: 30px;
+        
+    }
+
+    .menu1 p, .menu2 p, .menu3 p, .menu4 p {
+        color: white;
+        font-size: 18px;
+        font-family: 'Exo';
+        opacity: 0%;
+        transition: 0.7s all ease-in-out;
+    }
+
+    .menu1 h1, .menu2 h1, .menu3 h1, .menu4 h1 {
+        color: white;
+        font-family: 'Quicksand';
+        text-transform: uppercase;
+    }
+
+    .segundoDivMenu {
+        margin-bottom: -50px;
+        margin-top: 30px;
+        
+    }
+
+    .menu1:hover .inputMenus {
+        opacity: 100%;
+        transform: scale(1);
+    }
+
+    .menu1:hover p {
+        opacity: 100%;
+    }
+
+    .menu2:hover .inputMenus {
+        opacity: 100%;
+        transform: scale(1);
+    }
+
+    .menu2:hover p {
+        opacity: 100%;
+    }
+
+    .menu3:hover .inputMenus {
+        opacity: 100%;
+        transform: scale(1);
+    }
+
+    .menu3:hover p {
+        opacity: 100%;
+    }
+
+    .menu4:hover .inputMenus {
+        opacity: 100%;
+        transform: scale(1);
+    }
+
+    .menu4:hover p {
+        opacity: 100%;
+    }
+
+    .inputMenus {
+        text-transform: uppercase;
+        background-color: #1b2021; 
+        border: 0;
+        color: #e8dab2;
+        width: 180px;
+        height: 60px;
+        opacity: 0%;
+        transition: all 0.7s ease-in-out;
+        cursor: pointer;
+        transform: scale(0.2);
+    }
+
+    .menu2 {
+        background-image: linear-gradient(to bottom, rgba(3, 3, 3, 0.5), rgba(26, 3, 31, 0.6)),url('../../RESOURCES/Images/menuSano.jpg');
+    }
+
+    .menu3 {
+        background-image: linear-gradient(to bottom, rgba(3, 3, 3, 0.5), rgba(26, 3, 31, 0.6)),url('../../RESOURCES/Images/cafes.jpg');
+    }
+
+    .menu4 {
+        background-image: linear-gradient(to bottom, rgba(3, 3, 3, 0.5), rgba(26, 3, 31, 0.6)),url('../../RESOURCES/Images/postres.jpg');
+    }
+
+    .divInteraccion {
+        grid-column: 2/3;
+        grid-row: 10/10;
+        background-color: black;
+    }
+
+    .reservasWrapper {
+        background-image: linear-gradient(to bottom, rgba(57, 3, 65, 0.5), rgba(17, 13, 13, 0.7), rgba(35, 2, 39, 0.6)), url('../../RESOURCES/Backgrounds/restaurantBackground.jpg');
+        grid-column: 1/3;
+        grid-row: 12/12;
+        background-position: 5% 5%;
+        background-size: cover;
+        transition: all 1s ease-in-out;
+        display: flex;
+        justify-content:center;
+        text-align: center;
+        flex-direction: column;
+        border-top: 1px solid lightgreen;
+    }
+
+    .formularioReservas {
+       color: white;
+       font-family: 'Quicksand';
+       transition: all 0.3s ease-in-out;
+       opacity: 0%;
+    }
+
+    .formularioReservas table {
+        display: flex;
+        justify-content: center;
+    }
+
+    .formularioReservas input {
+        margin-left: 2px;
+        width: 300px;
+        height: 20px;
+        border: 0;
+        background-color: transparent;
+        margin-top: -10px;
+        border-bottom: 1px solid darkmagenta;
+        color: white;
+        font-family: 'Exo';
+        
+    }
+
+    .reservasWrapper:hover .formularioReservas {
+        opacity: 100%;
+    }
+
+    .reservasWrapper:hover {
+        background-position: 5% 95%;
+    }
+
+    .reservasWrapper:hover h1 {
+        opacity: 100%;
+    }
+
+    .reservasWrapper:hover p {
+        opacity: 100%;
+    }
+
+    .reservasWrapper:hover .inputReserva {
+        opacity: 100%;
+        transform: scale(1);
+    }
+
+    .reservasWrapper h1, .reservasWrapper p {
+        opacity: 0%;
+        color: white;
+        text-align: center;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .reservasWrapper h1 {
+        font-family: 'Exo';
+        font-size: 21px;
+    }
+
+    .inputReserva {
+        margin-top: 30px;
+        text-transform: uppercase;
+        background-color: #1b2021; 
+        border: 0;
+        color: #e8dab2;
+        opacity: 0%;
+        width: 180px;
+        height: 60px;
+        transition: all 0.7s ease-in-out;
+        cursor: pointer;
+        transform: scale(0);
+    }
+
+    footer {
+        width: 100vw;
+        height: 20vh;
+        background-color: var(--varNavbar2);
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        flex-direction: column;
+        text-align: center;
+        color: white;
+        font-family: 'Quicksand';
+        border-top: 1px solid lightgreen;
+    }
+
+    footer .searchWrapper {
+        margin-top: 20px;
+    }
+
+    .restaurantReplacement {
+        display: none;
+        color: black;
+        background-color: white;
+        grid-column: 1/3;
+        grid-row: 6/6;
+        background-image: linear-gradient(to bottom, rgba(116, 116, 116, 0.5), rgba(17, 13, 13, 0.3), rgba(35, 2, 39, 0.6)), url('../../RESOURCES/Backgrounds/restaurantReplacementBg.jpg');
+        background-size: cover;
+        transition: all 1s ease-in-out;
+        justify-content:center;
+        text-align: center;
+        flex-direction: column;
+        border-top: 1px solid lightgreen;
+    }
+
+    .recetasReplacement {
+        display: none;
+        color: black;
+        background-color: white;
+        grid-column: 1/3;
+        grid-row: 8/8;
+        background-image: linear-gradient(to bottom, rgba(12, 11, 11, 0.5), rgba(119, 8, 110, 0.3), rgba(35, 2, 39, 0.6)), url('../../RESOURCES/Backgrounds/recetasReplacement.jpg');
+        background-size: cover;
+        transition: all 1s ease-in-out;
+        justify-content:center;
+        text-align: center;
+        flex-direction: column;
+        border-top: 1px solid lightgreen;
+    }
+
+    .restaurantReplacement div {
+        margin-top: 30vh;
+    }
+
+    .inputReplacement {
+        margin-top: 30px;
+        margin-top: 30px;
+        text-transform: uppercase;
+        background-color: #1b2021; 
+        border: 0;
+        color: #e8dab2;
+        width: 180px;
+        height: 60px;
+        cursor: pointer;
+    }
+
+    .divUno h3 {
+        margin-top: 15px;
+        font-family: 'Exo';
+    }
+
+
+    @media screen and (max-width: 1400px) {
+        .showcaseRestaurantes {
+            display: none;
+        }
+
+        .restaurantReplacement {
+            display: initial;
+            display: flex;
+        }
+
+        .recetasReplacement {
+            display: initial;
+            display: flex;
+        }
+    }
+    
+    @media screen and (max-width: 1200px) {
+        #gridWrapper {
+        grid-template-rows: 40px 30px 50px 85.9vh 30px 80vh 5px 60vh 5px 100vh 100vh 5px 75vh;
+        }
+        .tarjetitasWrapper h3 {
+            padding-left: 100px;
+            padding-right: 100px;
+            padding-bottom: 3px;
+            font-size: 15px;
+        }
+
+        .tarjetitasWrapper p {
+            padding-left: 25px;
+            padding-right: 25px;
+            font-size: 8px;
+        }
+
+        .showcaseWrapper:hover .tarjetitasWrapper h3 {
+            margin-top: 40vh;
+        }
+
+        .wrapperBienvenida p {
+            font-size: 12px;
+        }
+        .showcaseRecetas {
+            display: none;
+        }
+
+        .varMenu {
+            grid-column: 1/2;
+            grid-row: 10/10;
+        }
+
+        .divInteraccion {
+            grid-column: 1/2;
+            grid-row: 11/11;
+            background-color: black;
+        }
+
+        .reservasWrapper {
+            grid-row: 13/13;
+        }
+        .menu1, .menu2, .menu3, .menu4 {
+            width: 100vw;
+        }
+    }
+    @media screen and (max-width: 360px) {
+            header p {
+                font-size: 12px;
+                }
+            .textSearch {
+                font-size: 10px;
+                width: 300px;
+            }
+    
+            .textSearch:hover {
+                width: 350px;
+            }
+
+            .menu1 p, .menu2 p, .menu3 p, .menu4 p {
+                font-size: 12px;
+                padding-right: 25px;
+                padding-left: 25px;
+            }
+
+            .menu1 h1, .menu2 h1, .menu3 h1, .menu4 h1 {
+                font-size: 20px;
+            }
+
+            .inputMenus {
+                width: 60px;
+                height: 30px;
+            }
+
+            .reservasWrapper .textoReservas, .reservasWrapper .formularioReservas {
+                padding: 25px;
+            }
+
+            .formularioReservas {
+                padding: 50px;
+            }
+    
+           
+        }
+
+        
+    
+        @media screen and (max-width: 380px) {
+            header p {
+                font-size: 10px;
+                margin: 12px;
+                }
+    
+                .textSearch {
+                    margin-top: 7px;
+                    font-size: 10px;
+                    width: 250px;
+                }
+
+                .buttonSearch {
+                    margin-top: 7px;
+                }
+        
+                .textSearch:hover {
+                    width: 270px;
+                }
+        }
